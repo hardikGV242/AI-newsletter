@@ -1,6 +1,19 @@
-"""Builds the Teams message (an Adaptive Card) from the finished post."""
+"""Builds the Teams message (an Adaptive Card) in the "SF & AI Daily Pulse" layout.
+
+Per story: [TAG] headline, a 1-2 sentence summary, a Client Impact line and a
+"Read on <source>" button. Friday adds a quiz with a "Reveal Answers" button.
+"""
+
+import re
 
 LETTERS = "ABCD"
+_SENTENCE_END = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(])")
+
+
+def _bullets(text):
+    """Turn a short paragraph into a Markdown bullet list, one sentence per bullet."""
+    parts = [p.strip() for p in _SENTENCE_END.split(str(text).strip()) if p.strip()]
+    return "\n".join(f"- {p}" for p in parts)
 
 
 def _tb(text, **extra):
@@ -9,52 +22,71 @@ def _tb(text, **extra):
     return block
 
 
+def _container(items, **extra):
+    block = {"type": "Container", "separator": True, "spacing": "Medium", "items": items}
+    block.update(extra)
+    return block
+
+
+def _story(story, sheet):
+    tag = (story.get("tag") or ("AI RADAR" if sheet["category"] == "ai" else "SALESFORCE")).upper()
+    color = "Good" if sheet["category"] == "ai" else "Accent"
+    return _container([
+        _tb(f"[{tag}] {story['title']}", weight="Bolder", color=color),
+        _tb(_bullets(story["text"]), spacing="Small"),
+        _tb(f"**Client Impact:** {story['why_it_matters']}", spacing="Small", isSubtle=True),
+        {"type": "ActionSet", "spacing": "Small", "actions": [
+            {"type": "Action.OpenUrl", "title": f"Read on {sheet['source']}", "url": sheet["url"]},
+        ]},
+    ])
+
+
+def _quiz(quiz):
+    items = [_tb("\U0001f3af Friday 60-Second Knowledge Check", weight="Bolder", color="Attention")]
+    for i, item in enumerate(quiz, 1):
+        options = "\n".join(f"{letter}) {opt}" for letter, opt in zip(LETTERS, item["options"]))
+        items.append(_tb(f"**Q{i}. {item['q']}**\n\n{options}", spacing="Small"))
+    answers = "\n\n".join(
+        f"**Q{i}:** {LETTERS[item['answer']]}) {item['options'][item['answer']]}"
+        for i, item in enumerate(quiz, 1))
+    items.append({"type": "ActionSet", "actions": [{
+        "type": "Action.ShowCard", "title": "Reveal Answers",
+        "card": {"type": "AdaptiveCard", "body": [_tb(answers)]},
+    }]})
+    return _container(items)
+
+
 def build(cfg, theme, outcome, reveal, date_label):
-    body = [_tb(f"{cfg['newsletter_name']} · {theme['name']} · {date_label}",
-                size="Small", isSubtle=True)]
+    # theme and reveal are kept for compatibility. Friday answers now sit in the
+    # same post behind "Reveal Answers", so no separate reveal is shown later.
+    body = [
+        _tb(cfg.get("newsletter_name", "⚡ SF & AI Daily Pulse"), size="Large", weight="Bolder"),
+        _tb(f"{date_label} • {cfg.get('subtitle', 'Curated by Gemini for our Salesforce Team')}",
+            isSubtle=True, spacing="None"),
+    ]
 
     if outcome["kind"] == "story":
         post = outcome["post"]
         sheets = {s["id"]: s for s in outcome["sheets"]}
-        body.append(_tb(post["headline"], size="Large", weight="Bolder", spacing="Small"))
         for story in post["stories"]:
-            sheet = sheets[story["story_id"]]
-            label = "\U0001f916 AI" if sheet["category"] == "ai" else "☁️ Salesforce"
-            body.append(_tb(label, weight="Bolder", color="Accent", spacing="Medium"))
-            body.append(_tb(f"**{story['title']}**", spacing="Small"))
-            body.append(_tb(story["text"], spacing="Small"))
-            body.append(_tb(f"\U0001f4a1 *Why it matters for us:* {story['why_it_matters']}",
-                            spacing="Small"))
-            body.append(_tb(f"Source: [{sheet['source']}]({sheet['url']})",
-                            size="Small", isSubtle=True, spacing="Small"))
-        jargon = post["jargon"]
-        body.append(_tb(f"\U0001f4d6 **Jargon Buster: {jargon['term']}**. {jargon['explanation']}",
-                        spacing="Medium"))
+            body.append(_story(story, sheets[story["story_id"]]))
         if post.get("quiz"):
-            body.append(_tb("\U0001f9e0 **Friday Quiz**", spacing="Medium"))
-            for i, item in enumerate(post["quiz"], 1):
-                body.append(_tb(f"**{i}. {item['q']}**", spacing="Small"))
-                for letter, option in zip(LETTERS, item["options"]):
-                    body.append(_tb(f"{letter}. {option}", spacing="None"))
-        body.append(_tb(f"\U0001f4ac **{post['question']}**", spacing="Medium"))
+            body.append(_quiz(post["quiz"]))
+        question = post["question"]
     else:
         backup = outcome["backup"]
-        body.append(_tb(backup["headline"], size="Large", weight="Bolder", spacing="Small"))
-        body.append(_tb(f"**{backup['label']}**", color="Accent", spacing="Medium"))
-        body.append(_tb(backup["body"], spacing="Small"))
-        body.append(_tb(f"\U0001f4ac **{backup['question']}**", spacing="Medium"))
+        body.append(_container([
+            _tb(f"[{backup['label'].upper()}] {backup['headline']}", weight="Bolder", color="Accent"),
+            _tb(backup["body"], spacing="Small"),
+        ]))
+        question = backup["question"]
 
-    if reveal:
-        lines = ["✅ **Last Friday's quiz answers**"]
-        for i, item in enumerate(reveal["quiz"], 1):
-            lines.append(f"{i}. {LETTERS[item['answer']]}. {item['options'][item['answer']]}")
-        body.append(_tb("\n\n".join(lines), spacing="Medium"))
+    body.append(_container([_tb(f"\U0001f4ac {question}", weight="Bolder")], style="emphasis"))
 
-    body.append(_tb(
-        "React: \U0001f44d learned something · \U0001f4a1 will try it · "
-        "\U0001f914 want more. Written by AI from the linked sources. "
-        "Spot a mistake? Reply in the thread.",
-        size="Small", isSubtle=True, spacing="Medium"))
+    if cfg.get("feedback_link"):
+        body.append({"type": "ActionSet", "actions": [{
+            "type": "Action.OpenUrl", "title": "Submit Team Tip / POC Feedback",
+            "url": cfg["feedback_link"]}]})
 
     return {
         "type": "message",
@@ -64,8 +96,7 @@ def build(cfg, theme, outcome, reveal, date_label):
             "content": {
                 "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
                 "type": "AdaptiveCard",
-                "version": "1.2",
-                "msteams": {"width": "Full"},
+                "version": "1.4",
                 "body": body,
             },
         }],

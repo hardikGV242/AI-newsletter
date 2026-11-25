@@ -11,15 +11,30 @@
     "url": "https://admin.salesforce.com/feed",
     "category": "salesforce",
     "tier": 1,
-    "enabled": true
+    "enabled": false,
+    "note": "Disabled: site returns HTTP 403 to the bot."
   },
   {
     "name": "Salesforce Developers Blog",
     "url": "https://developer.salesforce.com/blogs/feed",
     "category": "salesforce",
     "tier": 1,
-    "enabled": true,
-    "note": "URL not confirmed. Run check-sources and fix or disable."
+    "enabled": false,
+    "note": "Disabled: site returns HTTP 403 to the bot."
+  },
+  {
+    "name": "Salesforce Engineering",
+    "url": "https://engineering.salesforce.com/feed",
+    "category": "salesforce",
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Automation Champion",
+    "url": "https://automationchampion.com/feed",
+    "category": "salesforce",
+    "tier": 2,
+    "enabled": true
   },
   {
     "name": "Salesforce Ben",

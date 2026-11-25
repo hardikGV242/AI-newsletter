@@ -1,0 +1,226 @@
+{
+ "date": "2026-11-25",
+ "attempts": [
+  {
+   "stories": [
+    "https://openai.com/index/introducing-shirudo",
+    "https://www.salesforceben.com/what-happened-to-cpq-a-timeline-of-salesforces-most-controversial-product/"
+   ],
+   "rounds": [
+    {
+     "draft": {
+      "headline": "Updates on open-source Linux security runtime and Salesforce CPQ certification timelines.",
+      "stories": [
+       {
+        "story_id": 1,
+        "tag": "SECURITY",
+        "title": "OpenAI and Cisco introduce Shirudo",
+        "text": "- OpenAI and Cisco launched Shirudo, an open-source runtime designed to help protect Linux systems.\n- Codex-generated shields blocked a Java4Shell exploit against a running Elasticsearch service without needing a restart during controlled tests.\n- Shirudo utilizes eBPF and Trusted Platform Modules to support verifiable protection records.",
+        "why_it_matters": "Review infrastructure security standards for Linux systems hosting integrations to evaluate potential runtime protections."
+       },
+       {
+        "story_id": 2,
+        "tag": "SF RELEASE",
+        "title": "What Happened to CPQ? A Timeline of Salesforce’s Most Controversial Product",
+        "text": "- Salesforce confirmed that CPQ entered End of Sale status in March 2025, meaning no new customers are added while existing customers retain support and renewals.\n- Twenty-four certifications are retiring, including the CPQ Administrator exam which had its final day to sit on August 31, 2026, and officially retires on February 1, 2027.\n- Salesforce previously announced the acquisition of SteelBrick in December 2015 for $360M.",
+        "why_it_matters": "Audit client org roadmaps to prepare for upcoming CPQ certification retirements and End of Sale policies."
+       }
+      ],
+      "question": "How would you advise a client currently using Salesforce CPQ regarding their future product roadmap?",
+      "quiz": []
+     },
+     "problems": []
+    }
+   ],
+   "fact_sheets": [
+    {
+     "url": "https://openai.com/index/introducing-shirudo",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "OpenAI and Cisco are launching Shirudo, which is an open-source runtime designed to help protect Linux systems.",
+       "evidence": "OpenAI and Cisco are launching Shirudo, an open-source runtime that helps teams protect Linux systems"
+      },
+      {
+       "id": "f2",
+       "fact": "During a controlled test, a Codex-generated shield successfully blocked a Java4Shell exploit against a running Elasticsearch service without needing a restart.",
+       "evidence": "a Codex-generated shield blocked a Java4Shell exploit attempt against a running Elasticsearch service without requiring a restart."
+      },
+      {
+       "id": "f3",
+       "fact": "Shirudo utilizes eBPF, which is a Linux technology enabling small programs to run at specific points inside the operating system.",
+       "evidence": "Shirudo uses eBPF, a Linux technology that allows small programs to run at specific points inside the operating system."
+      },
+      {
+       "id": "f4",
+       "fact": "Shirudo uses a Trusted Platform Module to support a verifiable record of protections being loaded or removed.",
+       "evidence": "Shirudo uses a Trusted Platform Module (TPM) to support a verifiable record of protections being loaded or removed."
+      }
+     ],
+     "dropped": []
+    },
+    {
+     "url": "https://www.salesforceben.com/what-happened-to-cpq-a-timeline-of-salesforces-most-controversial-product/",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "In June 2026, Salesforce announced that 24 certifications are retiring, which includes the CPQ Administrator exam.",
+       "evidence": "June 2026: Salesforce announces 24 certifications retiring, including CPQ Administrator."
+      },
+      {
+       "id": "f2",
+       "fact": "August 31, 2026 was the final day to ever sit for the CPQ Administrator exam.",
+       "evidence": "Aug 31, 2026: Last day to sit the CPQ Administrator exam, ever."
+      },
+      {
+       "id": "f3",
+       "fact": "The CPQ Administrator exam officially retires on February 1, 2027.",
+       "evidence": "That was the last day to take the exam (if you were still planning to), but it officially retires February 1, 2027."
+      },
+      {
+       "id": "f4",
+       "fact": "In March 2025, Salesforce confirmed that CPQ entered End of Sale status, meaning no new customers are added.",
+       "evidence": "March 2025: Salesforce confirms CPQ has entered End of Sale, which means no new customers, but existing customers keep support and renewals."
+      },
+      {
+       "id": "f5",
+       "fact": "Under the End of Sale status, existing CPQ customers retain their support and renewal capabilities.",
+       "evidence": "March 2025: Salesforce confirms CPQ has entered End of Sale, which means no new customers, but existing customers keep support and renewals."
+      },
+      {
+       "id": "f6",
+       "fact": "In December 2015, Salesforce announced the acquisition of SteelBrick for $360M.",
+       "evidence": "Dec 2015: Salesforce announces the $360M acquisition."
+      }
+     ],
+     "dropped": []
+    }
+   ]
+  }
+ ],
+ "feed_errors": [
+  "Google DeepMind Blog: not well-formed (invalid token): line 1, column 0"
+ ],
+ "kind": "story",
+ "reason": "",
+ "message": {
+  "type": "message",
+  "attachments": [
+   {
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "contentUrl": null,
+    "content": {
+     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+     "type": "AdaptiveCard",
+     "version": "1.4",
+     "body": [
+      {
+       "type": "TextBlock",
+       "text": "⚡ SF & AI Daily Pulse",
+       "wrap": true,
+       "size": "Large",
+       "weight": "Bolder"
+      },
+      {
+       "type": "TextBlock",
+       "text": "Wednesday, 25 Nov 2026 • Curated by Gemini for our Salesforce Team",
+       "wrap": true,
+       "isSubtle": true,
+       "spacing": "None"
+      },
+      {
+       "type": "Container",
+       "separator": true,
+       "spacing": "Medium",
+       "items": [
+        {
+         "type": "TextBlock",
+         "text": "[SECURITY] OpenAI and Cisco introduce Shirudo",
+         "wrap": true,
+         "weight": "Bolder",
+         "color": "Good"
+        },
+        {
+         "type": "TextBlock",
+         "text": "- - OpenAI and Cisco launched Shirudo, an open-source runtime designed to help protect Linux systems.\n- Codex-generated shields blocked a Java4Shell exploit against a running Elasticsearch service without needing a restart during controlled tests.\n- Shirudo utilizes eBPF and Trusted Platform Modules to support verifiable protection records.",
+         "wrap": true,
+         "spacing": "Small"
+        },
+        {
+         "type": "TextBlock",
+         "text": "**Client Impact:** Review infrastructure security standards for Linux systems hosting integrations to evaluate potential runtime protections.",
+         "wrap": true,
+         "spacing": "Small",
+         "isSubtle": true
+        },
+        {
+         "type": "ActionSet",
+         "spacing": "Small",
+         "actions": [
+          {
+           "type": "Action.OpenUrl",
+           "title": "Read on OpenAI News",
+           "url": "https://openai.com/index/introducing-shirudo"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "Container",
+       "separator": true,
+       "spacing": "Medium",
+       "items": [
+        {
+         "type": "TextBlock",
+         "text": "[SF RELEASE] What Happened to CPQ? A Timeline of Salesforce’s Most Controversial Product",
+         "wrap": true,
+         "weight": "Bolder",
+         "color": "Accent"
+        },
+        {
+         "type": "TextBlock",
+         "text": "- - Salesforce confirmed that CPQ entered End of Sale status in March 2025, meaning no new customers are added while existing customers retain support and renewals.\n- Twenty-four certifications are retiring, including the CPQ Administrator exam which had its final day to sit on August 31, 2026, and officially retires on February 1, 2027.\n- Salesforce previously announced the acquisition of SteelBrick in December 2015 for $360M.",
+         "wrap": true,
+         "spacing": "Small"
+        },
+        {
+         "type": "TextBlock",
+         "text": "**Client Impact:** Audit client org roadmaps to prepare for upcoming CPQ certification retirements and End of Sale policies.",
+         "wrap": true,
+         "spacing": "Small",
+         "isSubtle": true
+        },
+        {
+         "type": "ActionSet",
+         "spacing": "Small",
+         "actions": [
+          {
+           "type": "Action.OpenUrl",
+           "title": "Read on Salesforce Ben",
+           "url": "https://www.salesforceben.com/what-happened-to-cpq-a-timeline-of-salesforces-most-controversial-product/"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "Container",
+       "separator": true,
+       "spacing": "Medium",
+       "items": [
+        {
+         "type": "TextBlock",
+         "text": "💬 How would you advise a client currently using Salesforce CPQ regarding their future product roadmap?",
+         "wrap": true,
+         "weight": "Bolder"
+        }
+       ],
+       "style": "emphasis"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

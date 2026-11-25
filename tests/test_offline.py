@@ -117,7 +117,7 @@ class FakeLLM:
             if "Acme AI launches Orbit" in user:
                 return {"facts": FACTS_AI, "availability": "available"}
             return {"facts": FACTS_SF, "availability": "generally available"}
-        if "You write today's post" in user:
+        if "writing today's 3-minute Teams digest" in user:
             return self.draft("TODAY IS FRIDAY" in user)
         if "checking a draft" in user:
             if self.claims_pass:
@@ -290,11 +290,11 @@ class PipelineTests(unittest.TestCase):
     def test_friday_quiz_then_answers_on_monday(self):
         friday = datetime(2026, 12, 4, 4, 0, tzinfo=timezone.utc)
         self.go(FakeLLM(), friday)
-        self.assertIn("Friday Quiz", json.dumps(self.sent[0]))
+        self.assertIn("Reveal Answers", json.dumps(self.sent[0]))
         self.assertEqual(len(self.history()[0]["quiz"]), 3)
         monday = datetime(2026, 12, 7, 4, 0, tzinfo=timezone.utc)
         self.go(FakeLLM(), monday)
-        self.assertIn("quiz answers", json.dumps(self.sent[1]))
+        self.assertNotIn("Reveal Answers", json.dumps(self.sent[1]))
         self.assertTrue(self.history()[0]["quiz_revealed"])
 
     def test_same_story_is_not_repeated(self):

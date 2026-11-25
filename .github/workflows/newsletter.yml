@@ -1,0 +1,52 @@
+name: Daily newsletter
+
+on:
+  schedule:
+    # Times are UTC. 03:50 UTC = 09:20 AM India time, Monday to Friday.
+    # The two later runs are a safety net: they do nothing if today's post is already out.
+    - cron: "50 3 * * 1-5"
+    - cron: "35 4 * * 1-5"
+    - cron: "35 5 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (build the post but do not send it to Teams or save anything)"
+        type: boolean
+        default: true
+      force:
+        description: "Force (ignore weekend, skip dates and 'already posted today')"
+        type: boolean
+        default: false
+
+# Never run two at the same time.
+concurrency:
+  group: newsletter
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build and post today's newsletter
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          TEAMS_ALERT_WEBHOOK_URL: ${{ secrets.TEAMS_ALERT_WEBHOOK_URL }}
+        run: python3 -m newsletter run ${{ inputs.dry_run && '--dry-run' || '' }} ${{ inputs.force && '--force' || '' }}
+
+      - name: Save history and run logs
+        if: ${{ always() && !inputs.dry_run }}
+        run: |
+          git config user.name "newsletter-bot"
+          git config user.email "newsletter-bot@users.noreply.github.com"
+          git add state
+          if ! git diff --cached --quiet; then
+            git commit -m "Newsletter state $(date -u +%F)"
+            git push
+          fi

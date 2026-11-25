@@ -43,8 +43,14 @@ Copy that link as well.
 
 ## Step 3. Get an AI key
 
-The code uses the Anthropic API. In the Anthropic Console, create an API key and copy it. Check the
-current pricing on the Console. The job makes roughly 6 to 12 AI calls a day.
+The code uses the Google Gemini API on its **free tier** (no billing needed). Go to
+https://aistudio.google.com/apikey, sign in with a Google account, click "Create API key" and copy it.
+Do not link a billing account to that Google Cloud project if you want it to stay free.
+The job makes roughly 6 to 12 AI calls a day, far below the free-tier daily limits.
+The model is set in `config.json` (`"model"`, default `gemini-3.5-flash`). If it is busy or unavailable,
+the code automatically falls back to `gemini-3.5-flash-lite`, then `gemini-3.8-flash`
+(list in `"fallback_models"`). Each model has its own free daily limit.
+On the free tier Google may use prompts to improve its models; only public news is sent, so this is fine.
 To use a different AI provider, only the file `newsletter/llm.py` needs changing.
 
 ## Step 4. Test everything on your own computer first (recommended)
@@ -85,7 +91,7 @@ It is normal for some days to use a backup post. That means the safety checks di
    `git remote add origin <your repository address>`, `git push -u origin main`.
    The `.env` file is ignored on purpose. Never upload it.
 3. In the repository go to Settings > Secrets and variables > Actions > New repository secret.
-   Add three secrets with exactly these names: `ANTHROPIC_API_KEY`, `TEAMS_WEBHOOK_URL`, and (optional) `TEAMS_ALERT_WEBHOOK_URL`.
+   Add three secrets with exactly these names: `GEMINI_API_KEY`, `TEAMS_WEBHOOK_URL`, and (optional) `TEAMS_ALERT_WEBHOOK_URL`.
 4. Go to Settings > Actions > General > Workflow permissions and choose "Read and write permissions".
    The daily job needs this to save its history.
 
@@ -116,7 +122,7 @@ To change the time, edit the `cron` lines. The times are in UTC.
 | No post and no alert | The schedule did not run | Actions tab: check the workflow is enabled. GitHub can pause scheduled workflows in repositories with no activity for a while. |
 | Alert says "backup post was used" | No story passed the checks, or feeds were down | Open that day's run file in `state/runs`. Look at "problems" and "feed_errors". |
 | Test message sends but nothing in Teams | The Workflow is off, or its owner's sign-in expired | Workflows app > Run history; turn it on or sign in again. |
-| `HTTP 401` from the AI | Wrong or expired key | Replace the `ANTHROPIC_API_KEY` secret. |
+| `HTTP 401` from the AI | Wrong or expired key | Replace the `GEMINI_API_KEY` secret. |
 | Push fails with 403 in the job | Workflow permissions | Step 7, part 4. |
 | Too many backup posts | Checks reject drafts, or feeds are thin | Read the "problems" in the run file. Add feeds. Soften wording rules in `prompts/style_guide.md`. Never remove the number checks. |
 | Post is too long or too silly | Voice | Edit `prompts/style_guide.md`. Re-run a dry run. |

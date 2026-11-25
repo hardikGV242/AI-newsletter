@@ -1,3 +1,212 @@
 {
- "posts": []
+ "posts": [
+  {
+   "date": "2026-11-25",
+   "weekday": 2,
+   "kind": "story",
+   "reason": "",
+   "headline": "What would you do with AI agents in your CRM?",
+   "stories": [
+    {
+     "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+     "title": "Clay helps sales teams win with Codex and ChatGPT",
+     "source": "OpenAI News",
+     "category": "ai",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "ChatGPT and Codex integrations assist Clay users in researching deals and transforming data into go-to-market plays while GPT-6 models handle the reasoning.",
+       "evidence": "ChatGPT and Codex integrations help Clay users research deals and turn data into go-to-market plays, and GPT‑6 models handle the reasoning."
+      },
+      {
+       "id": "f2",
+       "fact": "Clay uses GPT-6 Sol as its primary model, GPT-6 Astra for complex tasks, and GPT-6 Luna for budget-conscious work.",
+       "evidence": "Clay uses GPT‑6 Sol as its primary model, with GPT‑6 Astra for harder tasks and GPT‑6 Luna for cost-sensitive work."
+      },
+      {
+       "id": "f3",
+       "fact": "Clay's ChatGPT plugin brings customer data into ChatGPT so sales representatives can research prospects without leaving the application.",
+       "evidence": "Clay’s ChatGPT plugin brings the same customer data into another tool reps already use, helping them learn more about prospects without leaving ChatGPT."
+      },
+      {
+       "id": "f4",
+       "fact": "Clay uses the Responses API to access multiple levels of intelligence and cost through a single interface.",
+       "evidence": "The Responses API lets Clay use different levels of intelligence and cost through the same interface."
+      },
+      {
+       "id": "f5",
+       "fact": "Clay is currently working on planned inbound sales development features that would allow an agent to demonstrate a product or service to a prospect.",
+       "evidence": "Clay is working on inbound sales development features that would let an agent show a product or service to a prospect."
+      }
+     ]
+    },
+    {
+     "url": "https://www.salesforceben.com/salesforce-offers-agentforce-coworker-at-no-extra-cost-to-smbs/",
+     "title": "Salesforce Offers Agentforce Coworker at No Extra Cost to SMBs",
+     "source": "Salesforce Ben",
+     "category": "salesforce",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "Salesforce is bringing Agentforce Coworker to its Starter and Pro Suites at no extra cost for small and medium-sized businesses.",
+       "evidence": "bringing Agentforce Coworker to its Starter and Pro Suites at no additional cost."
+      },
+      {
+       "id": "f2",
+       "fact": "Agentforce Coworker allows users to interact with CRM data through natural language to get insights, recommended next steps, and complete everyday tasks.",
+       "evidence": "Agentforce Coworker allows users to interact with their CRM through natural language, using their existing customer data to surface insights, recommend next steps, and carry out everyday tasks."
+      },
+      {
+       "id": "f3",
+       "fact": "According to Salesforce, 52% of SMBs that have not adopted AI agents think they are harder to configure than traditional software.",
+       "evidence": "52% of SMBs that have yet to adopt AI agents believe they are more difficult to configure than traditional software."
+      },
+      {
+       "id": "f4",
+       "fact": "Salesforce highlighted early customers Boutique Recruiting and Pedigree Technologies as already benefiting from using Coworker.",
+       "evidence": "Salesforce has also highlighted early customers, including Boutique Recruiting and Pedigree Technologies, that are already seeing benefits from using Coworker."
+      },
+      {
+       "id": "f5",
+       "fact": "Salesforce launched Free Suite last November, added Agentforce capabilities across SMB editions in March, and offered a 70% discount on Starter Suite in July.",
+       "evidence": "From the launch of Free Suite last November to introducing Agentforce capabilities across its SMB-focused editions in March, and offering a 70% discount on Starter Suite in July,"
+      },
+      {
+       "id": "f6",
+       "fact": "Curative CEO Fred Turner stated that his company replaced a $600K-a-year Salesforce contract with a vibe-coded CRM built in two months.",
+       "evidence": "his company had replaced its $600K-a-year Salesforce contract with a CRM that had been vibe-coded in just two months."
+      }
+     ]
+    }
+   ],
+   "quiz": [],
+   "quiz_revealed": false
+  },
+  {
+   "date": "2026-11-25",
+   "weekday": 2,
+   "kind": "story",
+   "reason": "",
+   "headline": "Lessons in AI Context Engineering and Latency Reduction",
+   "stories": [
+    {
+     "url": "https://engineering.salesforce.com/5-lessons-in-ai-context-engineering-why-more-context-is-not-better/",
+     "title": "5 Lessons in AI Context Engineering: Why More Context Is Not Better",
+     "source": "Salesforce Engineering",
+     "category": "salesforce",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "The team built Data 360 data graphs that deliver trusted customer context to Salesforce’s in-app Help Agent through a single lookup.",
+       "evidence": "our solution was to build Data 360 data graphs that deliver trusted customer context to Salesforce’s in-app Help Agent through a single lookup."
+      },
+      {
+       "id": "f2",
+       "fact": "One customer success scoring workload covering more than half a billion records took 7 to 30 seconds at the calling team's endpoint using zero-copy warehouse views.",
+       "evidence": "In one customer success, a scoring workload covering more than half a billion records and roughly 16 months of history took 7 to 30 seconds at the calling team’s endpoint using zero-copy warehouse views."
+      },
+      {
+       "id": "f3",
+       "fact": "One tenant had more than 1,000 SKUs on record and more than 800 cancelled orders in its history.",
+       "evidence": "One tenant had more than 1,000 SKUs on record and more than 800 cancelled orders in its history."
+      },
+      {
+       "id": "f4",
+       "fact": "Production monitoring now shows a median lookup latency below 200 milliseconds.",
+       "evidence": "Production monitoring now shows a median (P50) below 200 milliseconds."
+      },
+      {
+       "id": "f5",
+       "fact": "Storing the scores graph in Data 360 reduced average latency by approximately 48% at five concurrent callers and 40% at 30.",
+       "evidence": "Storing the scores graph in Data 360 reduced average latency by approximately 48% at five concurrent callers and 40% at 30."
+      },
+      {
+       "id": "f6",
+       "fact": "The case history contains approximately 13.5 million cases dating back to 2009.",
+       "evidence": "Our case history contains approximately 13.5 million cases dating back to 2009."
+      }
+     ]
+    }
+   ],
+   "quiz": [],
+   "quiz_revealed": false
+  },
+  {
+   "date": "2026-11-25",
+   "weekday": 2,
+   "kind": "story",
+   "reason": "",
+   "headline": "Updates on open-source Linux security runtime and Salesforce CPQ certification timelines.",
+   "stories": [
+    {
+     "url": "https://openai.com/index/introducing-shirudo",
+     "title": "OpenAI and Cisco introduce Shirudo",
+     "source": "OpenAI News",
+     "category": "ai",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "OpenAI and Cisco are launching Shirudo, which is an open-source runtime designed to help protect Linux systems.",
+       "evidence": "OpenAI and Cisco are launching Shirudo, an open-source runtime that helps teams protect Linux systems"
+      },
+      {
+       "id": "f2",
+       "fact": "During a controlled test, a Codex-generated shield successfully blocked a Java4Shell exploit against a running Elasticsearch service without needing a restart.",
+       "evidence": "a Codex-generated shield blocked a Java4Shell exploit attempt against a running Elasticsearch service without requiring a restart."
+      },
+      {
+       "id": "f3",
+       "fact": "Shirudo utilizes eBPF, which is a Linux technology enabling small programs to run at specific points inside the operating system.",
+       "evidence": "Shirudo uses eBPF, a Linux technology that allows small programs to run at specific points inside the operating system."
+      },
+      {
+       "id": "f4",
+       "fact": "Shirudo uses a Trusted Platform Module to support a verifiable record of protections being loaded or removed.",
+       "evidence": "Shirudo uses a Trusted Platform Module (TPM) to support a verifiable record of protections being loaded or removed."
+      }
+     ]
+    },
+    {
+     "url": "https://www.salesforceben.com/what-happened-to-cpq-a-timeline-of-salesforces-most-controversial-product/",
+     "title": "What Happened to CPQ? A Timeline of Salesforce’s Most Controversial Product",
+     "source": "Salesforce Ben",
+     "category": "salesforce",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "In June 2026, Salesforce announced that 24 certifications are retiring, which includes the CPQ Administrator exam.",
+       "evidence": "June 2026: Salesforce announces 24 certifications retiring, including CPQ Administrator."
+      },
+      {
+       "id": "f2",
+       "fact": "August 31, 2026 was the final day to ever sit for the CPQ Administrator exam.",
+       "evidence": "Aug 31, 2026: Last day to sit the CPQ Administrator exam, ever."
+      },
+      {
+       "id": "f3",
+       "fact": "The CPQ Administrator exam officially retires on February 1, 2027.",
+       "evidence": "That was the last day to take the exam (if you were still planning to), but it officially retires February 1, 2027."
+      },
+      {
+       "id": "f4",
+       "fact": "In March 2025, Salesforce confirmed that CPQ entered End of Sale status, meaning no new customers are added.",
+       "evidence": "March 2025: Salesforce confirms CPQ has entered End of Sale, which means no new customers, but existing customers keep support and renewals."
+      },
+      {
+       "id": "f5",
+       "fact": "Under the End of Sale status, existing CPQ customers retain their support and renewal capabilities.",
+       "evidence": "March 2025: Salesforce confirms CPQ has entered End of Sale, which means no new customers, but existing customers keep support and renewals."
+      },
+      {
+       "id": "f6",
+       "fact": "In December 2015, Salesforce announced the acquisition of SteelBrick for $360M.",
+       "evidence": "Dec 2015: Salesforce announces the $360M acquisition."
+      }
+     ]
+    }
+   ],
+   "quiz": [],
+   "quiz_revealed": false
+  }
+ ]
 }

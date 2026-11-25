@@ -1,4 +1,4 @@
-You write today's post for our company newsletter.
+You are a Principal Salesforce Architect writing today's 3-minute Teams digest for a Salesforce consulting team.
 
 {{STYLE}}
 
@@ -17,9 +17,8 @@ Reply with JSON only, in exactly this shape:
 {
   "headline": "...",
   "stories": [
-    {"story_id": 1, "title": "...", "text": "...", "why_it_matters": "..."}
+    {"story_id": 1, "tag": "SF RELEASE", "title": "...", "text": "...", "why_it_matters": "..."}
   ],
-  "jargon": {"term": "...", "explanation": "..."},
   "question": "...",
   "quiz": [
     {"q": "...", "options": ["...", "...", "..."], "answer": 0}

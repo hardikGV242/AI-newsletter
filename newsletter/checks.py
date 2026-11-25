@@ -73,7 +73,7 @@ def shape_problems(post, sheets, friday):
     problems = []
     if not isinstance(post, dict):
         return ["draft is not a JSON object"]
-    for key in ("headline", "stories", "jargon", "question"):
+    for key in ("headline", "stories", "question"):
         if not post.get(key):
             problems.append(f"missing '{key}'")
     stories = post.get("stories") or []
@@ -90,13 +90,12 @@ def shape_problems(post, sheets, friday):
                 problems.append(f"a story is missing '{key}'")
         count = len(str(story.get("text", "")).split())
         words += count + len(str(story.get("why_it_matters", "")).split())
-        if count < 25 or count > 170:
-            problems.append(f"a story text has {count} words (should be 40 to 120)")
-    if words > 450:
+        if count < 15 or count > 70:
+            problems.append(f"a story text has {count} words (should be 20 to 55)")
+        if len(str(story.get("why_it_matters", "")).split()) > 45:
+            problems.append("a Client Impact line is too long (one sentence)")
+    if words > 350:
         problems.append("the post is too long")
-    jargon = post.get("jargon") or {}
-    if not (isinstance(jargon, dict) and jargon.get("term") and jargon.get("explanation")):
-        problems.append("jargon needs a term and an explanation")
     quiz = post.get("quiz") or []
     if friday:
         if not (2 <= len(quiz) <= 3):
@@ -129,7 +128,7 @@ def code_problems(post, sheets, extra_sheets=()):
             problems.append("a story points to an unknown story_id")
             continue
         allowed, corpus = sheet_numbers(sheet), sheet_corpus(sheet)
-        for key in ("title", "text", "why_it_matters"):
+        for key in ("tag", "title", "text", "why_it_matters"):
             problems += _text_problems(str(story.get(key, "")), f"story {sheet['id']} {key}",
                                        allowed, corpus)
 

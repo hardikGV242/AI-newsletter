@@ -1,8 +1,17 @@
 {
-  "newsletter_name": "AI x SF Daily",
+  "newsletter_name": "⚡ SF & AI Daily Pulse",
+  "subtitle": "Curated by Gemini for our Salesforce Team",
+  "feedback_link": "",
   "timezone": "Asia/Kolkata",
   "skip_dates": [],
-  "model": "claude-sonnet-5-5",
+  "model": "gemini-3.5-flash",
+  "fallback_models": [
+    "gemini-3.5-flash-lite",
+    "gemini-3.8-flash"
+  ],
+  "llm_min_interval_seconds": 4,
+  "rank_retries": 1,
+  "rank_retry_wait_seconds": 60,
   "max_story_age_hours": 48,
   "dedupe_days": 10,
   "candidates_per_category": 10,
@@ -14,28 +23,28 @@
   "themes": {
     "0": {
       "name": "The week ahead",
-      "guide": "Frame the stories as things worth watching this week.",
-      "question_hint": "Ask which of today's stories they are most curious about."
+      "guide": "Keep why_it_matters as one actionable Client Impact sentence for client Salesforce orgs or delivery.",
+      "question_hint": "Ask which of today's updates matters most for our client orgs this week."
     },
     "1": {
       "name": "Tip of the day",
-      "guide": "Lean toward the practical angle: what could a Salesforce user or admin pay attention to or try because of these stories?",
-      "question_hint": "Ask if they have already tried or used this."
+      "guide": "Keep why_it_matters as one actionable Client Impact sentence for client Salesforce orgs or delivery. Lean toward the practical admin/developer angle.",
+      "question_hint": "Ask if anyone has already used this in a client org."
     },
     "2": {
       "name": "What would you do?",
-      "guide": "End each why_it_matters with a short, friendly 'what would you do' scenario question. The scenario is an invitation to think, not a new fact.",
-      "question_hint": "Invite people to share their answer to the scenario in the replies."
+      "guide": "Keep why_it_matters as one actionable Client Impact sentence for client Salesforce orgs or delivery.",
+      "question_hint": "Ask how they would advise a client about one of today's updates."
     },
     "3": {
       "name": "Try it today",
-      "guide": "Suggest one small thing the reader could try in five minutes that relates to the stories, worded as a suggestion. Do not promise results and do not state how a product behaves beyond the facts.",
-      "question_hint": "Ask people to reply and tell the team how it went."
+      "guide": "Keep why_it_matters as one actionable Client Impact sentence for client Salesforce orgs or delivery.",
+      "question_hint": "Ask who will try this in a sandbox and share what they find."
     },
     "4": {
       "name": "Quiz time",
-      "guide": "Keep the stories short and light today. The quiz is the star.",
-      "question_hint": "Ask people to reply with their quiz answers in the thread. Answers will be in the next post."
+      "guide": "Keep why_it_matters as one actionable Client Impact sentence for client Salesforce orgs or delivery.",
+      "question_hint": "Ask people to reply with their quiz answers before clicking Reveal Answers."
     }
   }
 }

@@ -5,6 +5,7 @@ An unchecked story is never posted.
 """
 import json
 import os
+import time
 import traceback
 from datetime import datetime, timezone
 from pathlib import Path
@@ -49,18 +50,22 @@ def rank(cfg, llm, label, candidates, recent_headlines, log):
         _prompt("select.md"), CATEGORY=label,
         RECENT="\n".join(f"- {h}" for h in recent_headlines) or "(none yet)",
         CANDIDATES=json.dumps(listing, ensure_ascii=False, indent=1))
-    try:
-        data = llm.complete_json(SYSTEM_EDITOR, prompt, 1500)
-        scored = []
-        for row in data["ranking"]:
-            index, score = int(row["id"]) - 1, float(row["score"])
-            if 0 <= index < len(candidates) and score >= cfg["min_score"]:
-                scored.append((score, index))
-        scored.sort(key=lambda pair: -pair[0])
-        return [candidates[i] for _, i in scored]
-    except Exception as err:
-        log(f"  could not rank {label} stories: {err}")
-        return []
+    tries = 1 + int(cfg.get("rank_retries", 1))
+    for attempt in range(1, tries + 1):
+        try:
+            data = llm.complete_json(SYSTEM_EDITOR, prompt, 1500)
+            scored = []
+            for row in data["ranking"]:
+                index, score = int(row["id"]) - 1, float(row["score"])
+                if 0 <= index < len(candidates) and score >= cfg["min_score"]:
+                    scored.append((score, index))
+            scored.sort(key=lambda pair: -pair[0])
+            return [candidates[i] for _, i in scored]
+        except Exception as err:
+            log(f"  could not rank {label} stories (try {attempt} of {tries}): {err}")
+            if attempt < tries:
+                time.sleep(float(cfg.get("rank_retry_wait_seconds", 60)))
+    return []
 
 
 def make_sheet(cfg, llm, item, log):
@@ -254,7 +259,7 @@ def run(cfg, llm, *, now=None, dry_run=False, force=False, weekday=None,
         if alert and not dry_run:
             alert(f"Newsletter: a backup post was used today because {reason}.")
 
-    message = card_mod.build(cfg, theme, outcome, reveal, local.strftime("%a %d %b %Y"))
+    message = card_mod.build(cfg, theme, outcome, reveal, local.strftime("%A, %d %b %Y"))
 
     if dry_run:
         log("DRY RUN: nothing was posted or saved. The message would be:")

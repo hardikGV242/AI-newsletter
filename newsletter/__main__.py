@@ -32,7 +32,8 @@ def _alert(text):
 
 def cmd_run(args):
     cfg = util.load_json(ROOT / "config.json")
-    llm = LLM(model=cfg.get("model"))
+    llm = LLM(model=cfg.get("model"), fallback_models=cfg.get("fallback_models"),
+              min_interval=cfg.get("llm_min_interval_seconds", 4))
     try:
         pipeline.run(cfg, llm, dry_run=args.dry_run, force=args.force,
                      weekday=args.weekday, alert=_alert)
@@ -70,7 +71,8 @@ def cmd_check_sources(_args):
 
 def cmd_check_llm(_args):
     cfg = util.load_json(ROOT / "config.json")
-    llm = LLM(model=cfg.get("model"))
+    llm = LLM(model=cfg.get("model"), fallback_models=cfg.get("fallback_models"),
+              min_interval=cfg.get("llm_min_interval_seconds", 4))
     print(f"Model: {llm.model}")
     print("Reply:", llm.complete("You are a connection test.", "Reply with the single word OK.", 20))
     return 0
