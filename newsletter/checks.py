@@ -58,10 +58,11 @@ def sheet_corpus(sheet):
 # Numbers written as words ("fifty-five percent", "two thousand twenty-six") would
 # slip past the digit check above, so they are not allowed. Plurals such as
 # "thousands of" are fine because they are not exact numbers.
+# "1 million" / "$2.5 billion" (a digit before the scale word) is normal and allowed.
 SPELLED_NUMBER = re.compile(
     r"\b(eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|"
-    r"twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred|thousand|million|"
-    r"billion|trillion)\b", re.I)
+    r"twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred|thousand)\b"
+    r"|(?<![\d.,]\s)(?<![\d.,])\b(million|billion|trillion)\b", re.I)
 
 
 def _text_problems(text, where, allowed_numbers, corpus):

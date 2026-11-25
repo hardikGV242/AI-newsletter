@@ -41,6 +41,20 @@ class DraftFormatTests(unittest.TestCase):
              "text": "Thousands of developers use Claude Code."}]}
         self.assertEqual(checks.code_problems(post, [SHEET]), [])
 
+    def test_digit_plus_million_is_allowed(self):
+        sheet = {"id": 1, "facts": [{"fact": "Intentful saved 1 million hours and $2.5 billion.",
+                                     "evidence": "Intentful saved 1 million hours and $2.5 billion in costs"}]}
+        post = {"headline": "h", "question": "q", "stories": [
+            {"story_id": 1, "title": "t", "why_it_matters": "w",
+             "text": "Intentful saved 1 million hours and $2.5 billion."}]}
+        self.assertEqual(checks.code_problems(post, [sheet]), [])
+
+    def test_bare_million_word_is_rejected(self):
+        post = {"headline": "h", "question": "q", "stories": [
+            {"story_id": 1, "title": "t", "why_it_matters": "w",
+             "text": "Intentful saved one million hours."}]}
+        self.assertTrue(any("as digits" in p for p in checks.code_problems(post, [SHEET])))
+
 
 if __name__ == "__main__":
     unittest.main()
