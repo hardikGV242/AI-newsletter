@@ -16,6 +16,7 @@ Go through every sentence in the draft's headline, stories (tag, title, text, wh
 
 FAIL the draft if ANY sentence does one of these:
 - adds a fact that is not in the fact sheets;
+- writes a number in words instead of digits (for example "fifty-five percent" instead of "55%");
 - changes a number, date, name or availability (for example turns a beta, plan or preview into something available now);
 - exaggerates or ranks ("first", "biggest", "revolutionary", "will transform") when the facts do not say it;
 - states a cause, result or prediction that is not in the facts;

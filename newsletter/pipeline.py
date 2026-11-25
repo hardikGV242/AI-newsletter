@@ -113,7 +113,23 @@ def write_post(llm, theme, friday, sheets, pool, problems=None, previous=None):
         THEME_NAME=theme["name"], THEME_GUIDE=theme["guide"], QUESTION_HINT=theme["question_hint"],
         STORIES=json.dumps(stories, ensure_ascii=False, indent=1),
         QUIZ_BLOCK=quiz_block, FEEDBACK=feedback)
-    return llm.complete_json(SYSTEM_EDITOR, prompt, 3000)
+    return normalise_draft(llm.complete_json(SYSTEM_EDITOR, prompt, 3000))
+
+
+def normalise_draft(post):
+    """Gemini sometimes returns a story field as a list of sentences instead of
+    one string. Turn any list into one line per item, so the checks and the
+    card always get plain text (never "['...', '...']")."""
+    if not isinstance(post, dict):
+        return post
+    for story in post.get("stories") or []:
+        if not isinstance(story, dict):
+            continue
+        for key in ("tag", "title", "text", "why_it_matters"):
+            value = story.get(key)
+            if isinstance(value, (list, tuple)):
+                story[key] = "\n".join(str(v).strip() for v in value if str(v).strip())
+    return post
 
 
 def claim_check(llm, draft, sheets, pool):

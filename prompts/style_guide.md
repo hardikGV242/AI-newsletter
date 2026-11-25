@@ -11,7 +11,7 @@ STRUCTURE OF THE POST
 - stories: one per story given. Each has
   - tag: a short UPPERCASE category tag such as 'SF RELEASE', 'DEV / FLOW', 'AGENTFORCE', 'DATA CLOUD', 'SECURITY' or 'AI RADAR'. No numbers.
   - title: a crisp, accurate headline, under 14 words,
-  - text: 2 or 3 short factual sentences (20 to 55 words in total) explaining what changed. Each sentence is shown as its own bullet point, so each must make sense on its own. Do not start sentences with "It" or "This",
+  - text: ONE plain string (not a list) with 2 or 3 short factual sentences (20 to 55 words in total) explaining what changed. Each sentence is shown as its own bullet point, so each must make sense on its own. Do not start sentences with "It" or "This". Do not add bullet symbols, dashes or brackets,
   - why_it_matters: the CLIENT IMPACT. One actionable sentence on how this affects client Salesforce orgs or our delivery work. This is advice and must not add new facts.
 - question: one short, punchy question that sparks team replies in the Teams thread.
 
@@ -19,7 +19,7 @@ WHAT YOU MAY CHANGE
 - Wording, order, headline, sentence length.
 
 WHAT YOU MUST NEVER CHANGE OR ADD
-- Numbers, percentages, prices, dates and times. Use exactly what the facts say.
+- Numbers, percentages, prices, dates and times. Use exactly what the facts say, always as digits (55%, 2026, 267). Never write numbers as words.
 - Names of products, companies and people.
 - Quotes and who said them. Do not use quotation marks unless you copy words from a fact.
 - Availability: beta, preview, planned and generally available mean different things. Keep them exactly.

@@ -55,8 +55,21 @@ def sheet_corpus(sheet):
     return util.norm_text(" ".join(f["fact"] + " " + f["evidence"] for f in sheet["facts"]))
 
 
+# Numbers written as words ("fifty-five percent", "two thousand twenty-six") would
+# slip past the digit check above, so they are not allowed. Plurals such as
+# "thousands of" are fine because they are not exact numbers.
+SPELLED_NUMBER = re.compile(
+    r"\b(eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|"
+    r"twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred|thousand|million|"
+    r"billion|trillion)\b", re.I)
+
+
 def _text_problems(text, where, allowed_numbers, corpus):
     problems = []
+    spelled = SPELLED_NUMBER.search(text or "")
+    if spelled:
+        problems.append(f"{where}: write numbers as digits exactly as in the facts "
+                        f"(found '{spelled.group(0)}')")
     for number, strong in util.number_tokens(text):
         if strong and number not in allowed_numbers:
             problems.append(f"{where}: the number {number} is not in the source facts")
