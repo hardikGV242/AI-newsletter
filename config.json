@@ -1,0 +1,41 @@
+{
+  "newsletter_name": "AI x SF Daily",
+  "timezone": "Asia/Kolkata",
+  "skip_dates": [],
+  "model": "claude-sonnet-5-5",
+  "max_story_age_hours": 48,
+  "dedupe_days": 10,
+  "candidates_per_category": 10,
+  "min_score": 5,
+  "max_candidates_examined": 4,
+  "max_attempts": 3,
+  "min_facts": 3,
+  "max_article_chars": 12000,
+  "themes": {
+    "0": {
+      "name": "The week ahead",
+      "guide": "Frame the stories as things worth watching this week.",
+      "question_hint": "Ask which of today's stories they are most curious about."
+    },
+    "1": {
+      "name": "Tip of the day",
+      "guide": "Lean toward the practical angle: what could a Salesforce user or admin pay attention to or try because of these stories?",
+      "question_hint": "Ask if they have already tried or used this."
+    },
+    "2": {
+      "name": "What would you do?",
+      "guide": "End each why_it_matters with a short, friendly 'what would you do' scenario question. The scenario is an invitation to think, not a new fact.",
+      "question_hint": "Invite people to share their answer to the scenario in the replies."
+    },
+    "3": {
+      "name": "Try it today",
+      "guide": "Suggest one small thing the reader could try in five minutes that relates to the stories, worded as a suggestion. Do not promise results and do not state how a product behaves beyond the facts.",
+      "question_hint": "Ask people to reply and tell the team how it went."
+    },
+    "4": {
+      "name": "Quiz time",
+      "guide": "Keep the stories short and light today. The quiz is the star.",
+      "question_hint": "Ask people to reply with their quiz answers in the thread. Answers will be in the next post."
+    }
+  }
+}

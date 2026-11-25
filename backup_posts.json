@@ -1,0 +1,79 @@
+[
+  {
+    "id": "jargon-agent",
+    "headline": "Quick brush-up: what is an AI agent?",
+    "label": "Jargon Buster",
+    "body": "An AI agent is an AI that does more than answer a question. It can also take steps toward a goal, like looking something up, filling in a form or sending a message, while people stay in charge of what it is allowed to do.\n\nThink of it like the difference between asking a friend for directions and asking a friend to drive you there.",
+    "question": "Where in your day would you let an agent help first?"
+  },
+  {
+    "id": "jargon-prompt",
+    "headline": "Prompts: the two-minute skill",
+    "label": "Jargon Buster",
+    "body": "A prompt is simply the instruction you give an AI. Better prompts usually get better answers. Three habits help: say what you want, give a little background, and say what the answer should look like (a list, a short email, a table).",
+    "question": "What is the best prompt you have written lately? Share it in the replies."
+  },
+  {
+    "id": "jargon-hallucination",
+    "headline": "Why AI can sound sure and still be wrong",
+    "label": "Jargon Buster",
+    "body": "When an AI says something untrue in a confident way, people call it a hallucination. The fix is a habit, not a tool: for anything important, open the original source and check it yourself. That is why every story in this newsletter links to its source.",
+    "question": "Have you ever caught an AI being confidently wrong? What happened?"
+  },
+  {
+    "id": "jargon-flow",
+    "headline": "Salesforce Flow in one minute",
+    "label": "Jargon Buster",
+    "body": "A Flow in Salesforce is a way to automate a process without writing code. For example, when a record changes, a flow can update another record, send an email or ask the user a few questions on a screen.",
+    "question": "What is one boring task at work you would love to automate?"
+  },
+  {
+    "id": "jargon-sandbox",
+    "headline": "Sandbox: the safe place to practise",
+    "label": "Jargon Buster",
+    "body": "A Salesforce sandbox is a copy of an org where you can try changes and test ideas without touching real data or real users.\n\nThink of it like a practice kitchen before you cook for guests.",
+    "question": "What would you test first if you had a safe practice space?"
+  },
+  {
+    "id": "tip-report-dashboard",
+    "headline": "Report or dashboard: which one do you need?",
+    "label": "Tip of the day",
+    "body": "A report lists records, like all open opportunities. A dashboard puts the numbers from reports on one page as charts, so you can take it in at a glance. A good rule: start with a report, and build a dashboard once you know which numbers you check every day.",
+    "question": "Which number do you check most often at work?"
+  },
+  {
+    "id": "try-summary",
+    "headline": "Try it today: summarise a long thread",
+    "label": "Try it today",
+    "body": "Pick a long email thread or document that is safe to use with your company's approved AI tool. Ask: \"Summarise this in five bullet points, then list any decisions and open questions.\" Then compare the result with the original to see what it got right.\n\nOnly use tools your company has approved, and never paste customer or confidential data into other ones.",
+    "question": "Try it and tell us in the replies: did it save you time?"
+  },
+  {
+    "id": "what-would-you-do",
+    "headline": "What would you do? The confident draft",
+    "label": "What would you do?",
+    "body": "An AI tool writes a customer email for you. It reads well, but it mentions a discount you do not remember agreeing to. What do you do before you hit send?",
+    "question": "Share your answer in the replies."
+  },
+  {
+    "id": "myth-fact",
+    "headline": "Myth or fact: AI will do all of my work",
+    "label": "Myth vs fact",
+    "body": "Myth: AI will do all of my work.\n\nFact: AI is good at first drafts, summaries and repetitive steps. People are still needed for judgement, relationships and checking the result. The best results usually come when the two work together.",
+    "question": "Which part of your work do you most want to keep for yourself?"
+  },
+  {
+    "id": "habit-source",
+    "headline": "A small habit: always ask for the source",
+    "label": "Tip of the day",
+    "body": "When an AI gives you a fact, ask where it came from, then open that source yourself. It takes one extra minute and saves the awkward moment of repeating something that turns out to be wrong.",
+    "question": "Do you check sources today? Be honest: always, sometimes or never?"
+  },
+  {
+    "id": "fun-caption",
+    "headline": "Fun break: caption challenge",
+    "label": "Caption challenge",
+    "body": "Imagine an AI robot trying to make coffee for the whole sales team. Something goes hilariously wrong.",
+    "question": "Write the best one-line caption for the scene. Funniest reply wins bragging rights."
+  }
+]

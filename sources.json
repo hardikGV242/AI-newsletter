@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Salesforce News",
+    "url": "https://www.salesforce.com/news/feed/?bc=RSS",
+    "category": "salesforce",
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Salesforce Admins Blog",
+    "url": "https://admin.salesforce.com/feed",
+    "category": "salesforce",
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Salesforce Developers Blog",
+    "url": "https://developer.salesforce.com/blogs/feed",
+    "category": "salesforce",
+    "tier": 1,
+    "enabled": true,
+    "note": "URL not confirmed. Run check-sources and fix or disable."
+  },
+  {
+    "name": "Salesforce Ben",
+    "url": "https://www.salesforceben.com/feed/",
+    "category": "salesforce",
+    "tier": 2,
+    "enabled": true,
+    "note": "Trusted community site. URL not confirmed."
+  },
+  {
+    "name": "OpenAI News",
+    "url": "https://openai.com/news/rss.xml",
+    "category": "ai",
+    "tier": 1,
+    "enabled": true,
+    "note": "URL not confirmed. Run check-sources and fix or disable."
+  },
+  {
+    "name": "Google AI Blog",
+    "url": "https://blog.google/technology/ai/rss/",
+    "category": "ai",
+    "tier": 1,
+    "enabled": true,
+    "note": "URL not confirmed. Run check-sources and fix or disable."
+  },
+  {
+    "name": "Google DeepMind Blog",
+    "url": "https://deepmind.google/blog/rss.xml",
+    "category": "ai",
+    "tier": 1,
+    "enabled": true,
+    "note": "URL not confirmed. Run check-sources and fix or disable."
+  },
+  {
+    "name": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/feed.xml",
+    "category": "ai",
+    "tier": 2,
+    "enabled": true,
+    "note": "URL not confirmed. Run check-sources and fix or disable."
+  }
+]
