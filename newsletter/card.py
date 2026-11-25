@@ -8,11 +8,20 @@ import re
 
 LETTERS = "ABCD"
 _SENTENCE_END = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(])")
+# A bullet the AI may have written itself: "- ", "* ", "• ", "▪ ", "1. ", "2) "
+_MARKER = re.compile(r"^(?:\s*(?:[-*•▪◦‣⁃]|\d+[.)])\s+)+")
 
 
 def _bullets(text):
-    """Turn a short paragraph into a Markdown bullet list, one sentence per bullet."""
-    parts = [p.strip() for p in _SENTENCE_END.split(str(text).strip()) if p.strip()]
+    """Turn the story text into a Markdown bullet list, one sentence per bullet.
+
+    Works whether the AI sent a paragraph or its own list: existing bullet
+    markers are removed first so Teams never shows a bullet inside a bullet.
+    """
+    parts = []
+    for line in str(text).splitlines():
+        line = _MARKER.sub("", line).strip()
+        parts += [p.strip() for p in _SENTENCE_END.split(line) if p.strip()]
     return "\n".join(f"- {p}" for p in parts)
 
 
