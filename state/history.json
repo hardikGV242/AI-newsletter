@@ -207,6 +207,93 @@
    ],
    "quiz": [],
    "quiz_revealed": false
+  },
+  {
+   "date": "2026-11-25",
+   "weekday": 2,
+   "kind": "story",
+   "reason": "",
+   "headline": "Daily digest on OpenAI proposal workflows and Salesforce engineering frameworks.",
+   "stories": [
+    {
+     "url": "https://openai.com/business/customer-stories/intentful-dots",
+     "title": "How Intentful uses dots to make more time for growth",
+     "source": "OpenAI News",
+     "category": "ai",
+     "facts": [
+      {
+       "id": "f2",
+       "fact": "Marina named her dot Aria to help her get from research to a proposal in a few hours instead of several days.",
+       "evidence": "she named Aria, to help her get from research to a proposal she could put her name on in a few hours instead of several days."
+      },
+      {
+       "id": "f3",
+       "fact": "Aria looked through about 300 website sitemaps to help figure out which sites to include in a new offer.",
+       "evidence": "My dot looked through about 300 website sitemaps, helped me figure out which sites to include in a new offer"
+      },
+      {
+       "id": "f5",
+       "fact": "Aria knows to use Intentful's templates from Google Drive when drafting proposals.",
+       "evidence": "When drafting proposals, Aria knows to use Intentful’s templates from Google Drive."
+      },
+      {
+       "id": "f6",
+       "fact": "More than 1 million businesses around the world are achieving meaningful results with OpenAI.",
+       "evidence": "More than 1 million businesses around the world are achieving meaningful results with OpenAI."
+      }
+     ]
+    },
+    {
+     "url": "https://engineering.salesforce.com/supercharging-ai-agents-build-a-git-based-engineering-knowledge-framework-in-20-minutes/",
+     "title": "Supercharging AI Agents: Build a Git-Based Engineering Knowledge Framework in 20 Minutes",
+     "source": "Salesforce Engineering",
+     "category": "salesforce",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "The authors created an AI-powered engineering knowledge system called the Second Brain to preserve architectural decisions and source evidence.",
+       "evidence": "Our solution was an AI-powered engineering knowledge system we call the Second Brain."
+      },
+      {
+       "id": "f2",
+       "fact": "The Second Brain framework currently spans 21 domain-specific repositories and more than 200 sources.",
+       "evidence": "Today, it spans: 21 domain-specific repositories More than 200 sources"
+      },
+      {
+       "id": "f3",
+       "fact": "The Kubernetes upgrade agent uses knowledge captured in the Second Brain to automate approximately 80% of the upgrade process.",
+       "evidence": "Our Kubernetes upgrade agent uses knowledge captured in the Second Brain to help automate approximately 80% of the upgrade process"
+      },
+      {
+       "id": "f4",
+       "fact": "After dividing the initial repository into smaller pieces, the framework contains 21 domain brains, more than 250 articles, and over 200 registered sources.",
+       "evidence": "Today, our framework contains 21 domain brains, more than 250 articles, and over 200 registered sources."
+      },
+      {
+       "id": "f5",
+       "fact": "A Salesforce Women in Technology workshop was attended by more than 400 participants.",
+       "evidence": "We demonstrated how to begin addressing this problem during a Salesforce Women in Technology workshop attended by more than 400 participants."
+      },
+      {
+       "id": "f6",
+       "fact": "After about 10 minutes explaining the framework, the workshop devoted 20 minutes to hands-on creation.",
+       "evidence": "After approximately 10 minutes explaining the framework, we devoted 20 minutes to hands-on creation."
+      },
+      {
+       "id": "f7",
+       "fact": "The goal of the tutorial is to create an initial Second Brain in approximately 20 minutes.",
+       "evidence": "The goal is to create an initial Second Brain in approximately 20 minutes, not a fully populated, production-ready knowledge system."
+      },
+      {
+       "id": "f8",
+       "fact": "Subsequent ingestions into the framework can take around three minutes.",
+       "evidence": "Subsequent ingestions can take around three minutes."
+      }
+     ]
+    }
+   ],
+   "quiz": [],
+   "quiz_revealed": false
   }
  ]
 }

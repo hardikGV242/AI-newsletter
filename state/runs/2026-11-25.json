@@ -3,30 +3,30 @@
  "attempts": [
   {
    "stories": [
-    "https://openai.com/index/introducing-shirudo",
-    "https://www.salesforceben.com/what-happened-to-cpq-a-timeline-of-salesforces-most-controversial-product/"
+    "https://openai.com/business/customer-stories/intentful-dots",
+    "https://engineering.salesforce.com/supercharging-ai-agents-build-a-git-based-engineering-knowledge-framework-in-20-minutes/"
    ],
    "rounds": [
     {
      "draft": {
-      "headline": "Updates on open-source Linux security runtime and Salesforce CPQ certification timelines.",
+      "headline": "Daily digest on OpenAI proposal workflows and Salesforce engineering frameworks.",
       "stories": [
        {
         "story_id": 1,
-        "tag": "SECURITY",
-        "title": "OpenAI and Cisco introduce Shirudo",
-        "text": "- OpenAI and Cisco launched Shirudo, an open-source runtime designed to help protect Linux systems.\n- Codex-generated shields blocked a Java4Shell exploit against a running Elasticsearch service without needing a restart during controlled tests.\n- Shirudo utilizes eBPF and Trusted Platform Modules to support verifiable protection records.",
-        "why_it_matters": "Review infrastructure security standards for Linux systems hosting integrations to evaluate potential runtime protections."
+        "tag": "AI RADAR",
+        "title": "How Intentful uses dots to make more time for growth",
+        "text": "Marina named her dot Aria to help her get from research to a proposal in a few hours instead of several days. Aria looked through about 300 website sitemaps to help figure out which sites to include in a new offer. More than 1 million businesses around the world are achieving meaningful results with OpenAI.",
+        "why_it_matters": "Review how proposal generation tools can speed up client deliverables and reduce manual research time."
        },
        {
         "story_id": 2,
-        "tag": "SF RELEASE",
-        "title": "What Happened to CPQ? A Timeline of Salesforce’s Most Controversial Product",
-        "text": "- Salesforce confirmed that CPQ entered End of Sale status in March 2025, meaning no new customers are added while existing customers retain support and renewals.\n- Twenty-four certifications are retiring, including the CPQ Administrator exam which had its final day to sit on August 31, 2026, and officially retires on February 1, 2027.\n- Salesforce previously announced the acquisition of SteelBrick in December 2015 for $360M.",
-        "why_it_matters": "Audit client org roadmaps to prepare for upcoming CPQ certification retirements and End of Sale policies."
+        "tag": "AGENTFORCE",
+        "title": "Supercharging AI Agents: Build a Git-Based Engineering Knowledge Framework in 20 Minutes",
+        "text": "Authors created an AI-powered engineering knowledge system called the Second Brain to preserve architectural decisions and source evidence. The Kubernetes upgrade agent uses knowledge captured in the Second Brain to automate approximately 80% of the upgrade process. Subsequent ingestions into the framework can take around 3 minutes.",
+        "why_it_matters": "Adopt similar knowledge frameworks in client orgs to improve architectural documentation and automate routine upgrade tasks."
        }
       ],
-      "question": "How would you advise a client currently using Salesforce CPQ regarding their future product roadmap?",
+      "question": "How would you advise a client on implementing an engineering knowledge framework like the Second Brain for their AI agents?",
       "quiz": []
      },
      "problems": []
@@ -34,63 +34,76 @@
    ],
    "fact_sheets": [
     {
-     "url": "https://openai.com/index/introducing-shirudo",
+     "url": "https://openai.com/business/customer-stories/intentful-dots",
      "facts": [
       {
-       "id": "f1",
-       "fact": "OpenAI and Cisco are launching Shirudo, which is an open-source runtime designed to help protect Linux systems.",
-       "evidence": "OpenAI and Cisco are launching Shirudo, an open-source runtime that helps teams protect Linux systems"
-      },
-      {
        "id": "f2",
-       "fact": "During a controlled test, a Codex-generated shield successfully blocked a Java4Shell exploit against a running Elasticsearch service without needing a restart.",
-       "evidence": "a Codex-generated shield blocked a Java4Shell exploit attempt against a running Elasticsearch service without requiring a restart."
+       "fact": "Marina named her dot Aria to help her get from research to a proposal in a few hours instead of several days.",
+       "evidence": "she named Aria, to help her get from research to a proposal she could put her name on in a few hours instead of several days."
       },
       {
        "id": "f3",
-       "fact": "Shirudo utilizes eBPF, which is a Linux technology enabling small programs to run at specific points inside the operating system.",
-       "evidence": "Shirudo uses eBPF, a Linux technology that allows small programs to run at specific points inside the operating system."
-      },
-      {
-       "id": "f4",
-       "fact": "Shirudo uses a Trusted Platform Module to support a verifiable record of protections being loaded or removed.",
-       "evidence": "Shirudo uses a Trusted Platform Module (TPM) to support a verifiable record of protections being loaded or removed."
-      }
-     ],
-     "dropped": []
-    },
-    {
-     "url": "https://www.salesforceben.com/what-happened-to-cpq-a-timeline-of-salesforces-most-controversial-product/",
-     "facts": [
-      {
-       "id": "f1",
-       "fact": "In June 2026, Salesforce announced that 24 certifications are retiring, which includes the CPQ Administrator exam.",
-       "evidence": "June 2026: Salesforce announces 24 certifications retiring, including CPQ Administrator."
-      },
-      {
-       "id": "f2",
-       "fact": "August 31, 2026 was the final day to ever sit for the CPQ Administrator exam.",
-       "evidence": "Aug 31, 2026: Last day to sit the CPQ Administrator exam, ever."
-      },
-      {
-       "id": "f3",
-       "fact": "The CPQ Administrator exam officially retires on February 1, 2027.",
-       "evidence": "That was the last day to take the exam (if you were still planning to), but it officially retires February 1, 2027."
-      },
-      {
-       "id": "f4",
-       "fact": "In March 2025, Salesforce confirmed that CPQ entered End of Sale status, meaning no new customers are added.",
-       "evidence": "March 2025: Salesforce confirms CPQ has entered End of Sale, which means no new customers, but existing customers keep support and renewals."
+       "fact": "Aria looked through about 300 website sitemaps to help figure out which sites to include in a new offer.",
+       "evidence": "My dot looked through about 300 website sitemaps, helped me figure out which sites to include in a new offer"
       },
       {
        "id": "f5",
-       "fact": "Under the End of Sale status, existing CPQ customers retain their support and renewal capabilities.",
-       "evidence": "March 2025: Salesforce confirms CPQ has entered End of Sale, which means no new customers, but existing customers keep support and renewals."
+       "fact": "Aria knows to use Intentful's templates from Google Drive when drafting proposals.",
+       "evidence": "When drafting proposals, Aria knows to use Intentful’s templates from Google Drive."
       },
       {
        "id": "f6",
-       "fact": "In December 2015, Salesforce announced the acquisition of SteelBrick for $360M.",
-       "evidence": "Dec 2015: Salesforce announces the $360M acquisition."
+       "fact": "More than 1 million businesses around the world are achieving meaningful results with OpenAI.",
+       "evidence": "More than 1 million businesses around the world are achieving meaningful results with OpenAI."
+      }
+     ],
+     "dropped": [
+      "f1: evidence not found in article",
+      "f4: evidence not found in article"
+     ]
+    },
+    {
+     "url": "https://engineering.salesforce.com/supercharging-ai-agents-build-a-git-based-engineering-knowledge-framework-in-20-minutes/",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "The authors created an AI-powered engineering knowledge system called the Second Brain to preserve architectural decisions and source evidence.",
+       "evidence": "Our solution was an AI-powered engineering knowledge system we call the Second Brain."
+      },
+      {
+       "id": "f2",
+       "fact": "The Second Brain framework currently spans 21 domain-specific repositories and more than 200 sources.",
+       "evidence": "Today, it spans: 21 domain-specific repositories More than 200 sources"
+      },
+      {
+       "id": "f3",
+       "fact": "The Kubernetes upgrade agent uses knowledge captured in the Second Brain to automate approximately 80% of the upgrade process.",
+       "evidence": "Our Kubernetes upgrade agent uses knowledge captured in the Second Brain to help automate approximately 80% of the upgrade process"
+      },
+      {
+       "id": "f4",
+       "fact": "After dividing the initial repository into smaller pieces, the framework contains 21 domain brains, more than 250 articles, and over 200 registered sources.",
+       "evidence": "Today, our framework contains 21 domain brains, more than 250 articles, and over 200 registered sources."
+      },
+      {
+       "id": "f5",
+       "fact": "A Salesforce Women in Technology workshop was attended by more than 400 participants.",
+       "evidence": "We demonstrated how to begin addressing this problem during a Salesforce Women in Technology workshop attended by more than 400 participants."
+      },
+      {
+       "id": "f6",
+       "fact": "After about 10 minutes explaining the framework, the workshop devoted 20 minutes to hands-on creation.",
+       "evidence": "After approximately 10 minutes explaining the framework, we devoted 20 minutes to hands-on creation."
+      },
+      {
+       "id": "f7",
+       "fact": "The goal of the tutorial is to create an initial Second Brain in approximately 20 minutes.",
+       "evidence": "The goal is to create an initial Second Brain in approximately 20 minutes, not a fully populated, production-ready knowledge system."
+      },
+      {
+       "id": "f8",
+       "fact": "Subsequent ingestions into the framework can take around three minutes.",
+       "evidence": "Subsequent ingestions can take around three minutes."
       }
      ],
      "dropped": []
@@ -98,9 +111,7 @@
    ]
   }
  ],
- "feed_errors": [
-  "Google DeepMind Blog: not well-formed (invalid token): line 1, column 0"
- ],
+ "feed_errors": [],
  "kind": "story",
  "reason": "",
  "message": {
@@ -135,20 +146,20 @@
        "items": [
         {
          "type": "TextBlock",
-         "text": "[SECURITY] OpenAI and Cisco introduce Shirudo",
+         "text": "[AI RADAR] How Intentful uses dots to make more time for growth",
          "wrap": true,
          "weight": "Bolder",
          "color": "Good"
         },
         {
          "type": "TextBlock",
-         "text": "- - OpenAI and Cisco launched Shirudo, an open-source runtime designed to help protect Linux systems.\n- Codex-generated shields blocked a Java4Shell exploit against a running Elasticsearch service without needing a restart during controlled tests.\n- Shirudo utilizes eBPF and Trusted Platform Modules to support verifiable protection records.",
+         "text": "- Marina named her dot Aria to help her get from research to a proposal in a few hours instead of several days.\n- Aria looked through about 300 website sitemaps to help figure out which sites to include in a new offer.\n- More than 1 million businesses around the world are achieving meaningful results with OpenAI.",
          "wrap": true,
          "spacing": "Small"
         },
         {
          "type": "TextBlock",
-         "text": "**Client Impact:** Review infrastructure security standards for Linux systems hosting integrations to evaluate potential runtime protections.",
+         "text": "**Client Impact:** Review how proposal generation tools can speed up client deliverables and reduce manual research time.",
          "wrap": true,
          "spacing": "Small",
          "isSubtle": true
@@ -160,7 +171,7 @@
           {
            "type": "Action.OpenUrl",
            "title": "Read on OpenAI News",
-           "url": "https://openai.com/index/introducing-shirudo"
+           "url": "https://openai.com/business/customer-stories/intentful-dots"
           }
          ]
         }
@@ -173,20 +184,20 @@
        "items": [
         {
          "type": "TextBlock",
-         "text": "[SF RELEASE] What Happened to CPQ? A Timeline of Salesforce’s Most Controversial Product",
+         "text": "[AGENTFORCE] Supercharging AI Agents: Build a Git-Based Engineering Knowledge Framework in 20 Minutes",
          "wrap": true,
          "weight": "Bolder",
          "color": "Accent"
         },
         {
          "type": "TextBlock",
-         "text": "- - Salesforce confirmed that CPQ entered End of Sale status in March 2025, meaning no new customers are added while existing customers retain support and renewals.\n- Twenty-four certifications are retiring, including the CPQ Administrator exam which had its final day to sit on August 31, 2026, and officially retires on February 1, 2027.\n- Salesforce previously announced the acquisition of SteelBrick in December 2015 for $360M.",
+         "text": "- Authors created an AI-powered engineering knowledge system called the Second Brain to preserve architectural decisions and source evidence.\n- The Kubernetes upgrade agent uses knowledge captured in the Second Brain to automate approximately 80% of the upgrade process.\n- Subsequent ingestions into the framework can take around 3 minutes.",
          "wrap": true,
          "spacing": "Small"
         },
         {
          "type": "TextBlock",
-         "text": "**Client Impact:** Audit client org roadmaps to prepare for upcoming CPQ certification retirements and End of Sale policies.",
+         "text": "**Client Impact:** Adopt similar knowledge frameworks in client orgs to improve architectural documentation and automate routine upgrade tasks.",
          "wrap": true,
          "spacing": "Small",
          "isSubtle": true
@@ -197,8 +208,8 @@
          "actions": [
           {
            "type": "Action.OpenUrl",
-           "title": "Read on Salesforce Ben",
-           "url": "https://www.salesforceben.com/what-happened-to-cpq-a-timeline-of-salesforces-most-controversial-product/"
+           "title": "Read on Salesforce Engineering",
+           "url": "https://engineering.salesforce.com/supercharging-ai-agents-build-a-git-based-engineering-knowledge-framework-in-20-minutes/"
           }
          ]
         }
@@ -211,7 +222,7 @@
        "items": [
         {
          "type": "TextBlock",
-         "text": "💬 How would you advise a client currently using Salesforce CPQ regarding their future product roadmap?",
+         "text": "💬 How would you advise a client on implementing an engineering knowledge framework like the Second Brain for their AI agents?",
          "wrap": true,
          "weight": "Bolder"
         }
