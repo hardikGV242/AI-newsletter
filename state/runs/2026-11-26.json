@@ -1,0 +1,228 @@
+{
+ "date": "2026-11-26",
+ "attempts": [
+  {
+   "stories": [
+    "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+    "https://engineering.salesforce.com/how-mulesoft-rebuilt-a-live-observability-platform-while-migrating-39-petabytes-of-customer-data/"
+   ],
+   "rounds": [
+    {
+     "draft": {
+      "headline": "Google Gemini partners with Golden State and MuleSoft upgrades Hyperforce telemetry",
+      "stories": [
+       {
+        "story_id": 1,
+        "tag": "AI RADAR",
+        "title": "Google Gemini expands partnership with Golden State for operations and fan experience",
+        "text": "Google and Golden State expanded their partnership to make Google Gemini the Official AI Assistant Partner of the Warriors, the Valkyries, and Chase Center. Golden State is building custom AI agents with Gemini to assist business and basketball operations.",
+        "why_it_matters": "Review client operational workflows to identify where custom AI agents can automate routine internal tasks."
+       },
+       {
+        "story_id": 2,
+        "tag": "SF RELEASE",
+        "title": "MuleSoft rebuilt its observability platform on Hyperforce while migrating 39 petabytes",
+        "text": "MuleSoft migrated 39 petabytes of telemetry while replacing its observability platform on Hyperforce across more than 12 regions. Reducing services from 153 to 43 drove a 5x gain in infrastructure efficiency. Measured query latencies improved by 2X, while P95 telemetry delay dropped from multiple minutes to less than 1 minute.",
+        "why_it_matters": "Architecture teams should evaluate Hyperforce migrations to simplify client infrastructure and reduce query latency."
+       }
+      ],
+      "question": "Who will try these updates in a sandbox today and share what they find?",
+      "quiz": []
+     },
+     "problems": []
+    }
+   ],
+   "fact_sheets": [
+    {
+     "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "Google and Golden State are expanding their partnership to make Google Gemini the Official AI Assistant Partner of the Warriors, the Valkyries, and Chase Center.",
+       "evidence": "making Google Gemini the Official AI Assistant Partner and Official Generative AI & Enterprise LLM Partner of the Warriors, the 2026 WNBA Champion Valkyries, and Chase Center."
+      },
+      {
+       "id": "f2",
+       "fact": "The collaboration brings Gemini into the franchise ecosystem to provide fans with a more interactive game-day experience at Chase Center and through digital channels.",
+       "evidence": "The collaboration integrates Gemini across the entire franchise ecosystem. For fans, that means a more interactive game-day experience, both inside Chase Center via interactive videoboard features"
+      },
+      {
+       "id": "f3",
+       "fact": "Golden State is using Gemini for business behind the scenes to build custom AI agents that help teams work smarter in business and basketball operations.",
+       "evidence": "Golden State is deploying Gemini for business to build custom AI agents, helping their teams work smarter across both business and basketball operations."
+      },
+      {
+       "id": "f4",
+       "fact": "Golden State has been a Founding Partner of Chase Center since 2019 and previously utilized generative AI tools to help operations run smoother.",
+       "evidence": "As a Founding Partner of Chase Center since 2019, Golden State has used our gen AI tools to help their operations run smoother"
+      }
+     ],
+     "dropped": []
+    },
+    {
+     "url": "https://engineering.salesforce.com/how-mulesoft-rebuilt-a-live-observability-platform-while-migrating-39-petabytes-of-customer-data/",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "The engineering team migrated 39 petabytes of telemetry while replacing MuleSoft's aging observability platform on Hyperforce.",
+       "evidence": "replace MuleSoft’s aging observability platform, migrate 39 petabytes of telemetry, and keep production monitoring operational throughout the transformation."
+      },
+      {
+       "id": "f3",
+       "fact": "Reducing the number of services and components from 153 to 43 helped drive a 5x gain in infrastructure efficiency.",
+       "evidence": "we reduced the number of services and components from 153 to 43. The results were remarkable: nearly 3,000 clusters became just 24, a reduction of approximately 99%. Combined with the simplified architecture, this drove a 5x gain in infrastructure efficiency"
+      },
+      {
+       "id": "f4",
+       "fact": "Customers received 60 days of access to both experiences when improvements such as enhanced log search were introduced.",
+       "evidence": "Where we introduced improvements, including enhanced log search, customers received 60 days of access to both experiences so they could provide feedback before transitioning."
+      },
+      {
+       "id": "f5",
+       "fact": "The new scalable multi-tenant stack enabled near-real-time telemetry processing, with P95 telemetry delay dropping from multiple minutes to less than one minute.",
+       "evidence": "the new scalable, multi-tenant stack enabled near-real-time telemetry processing, with P95 telemetry delay falling from multiple minutes to less than one minute."
+      },
+      {
+       "id": "f6",
+       "fact": "Measured query latencies improved by 2X following the migration.",
+       "evidence": "Measured query latencies also improved by 2X."
+      },
+      {
+       "id": "f7",
+       "fact": "The rollout for the migration extended over more than 12 Hyperforce regions.",
+       "evidence": "Rolling out the migration in more than 12 Hyperforce regions introduced another coordination challenge."
+      }
+     ],
+     "dropped": [
+      "f2: number 24 not in its evidence"
+     ]
+    }
+   ]
+  }
+ ],
+ "feed_errors": [
+  "Salesforce Ben: HTTP 403: <!DOCTYPE html><title>Checking your browser...</title><noscript><p>Javascript required</p></noscript><meta content=\"width=device-width\"name=viewport><link href=\"data:;base64,=\"rel=icon><script src=\"/__challenge/probes.js?v=c3301fdb5ac5\"></script><script>window.HASHCASH_CONFIG={prefix:\"0000\",minTime:"
+ ],
+ "kind": "story",
+ "reason": "",
+ "message": {
+  "type": "message",
+  "attachments": [
+   {
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "contentUrl": null,
+    "content": {
+     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+     "type": "AdaptiveCard",
+     "version": "1.4",
+     "body": [
+      {
+       "type": "TextBlock",
+       "text": "⚡ SF & AI Daily Pulse",
+       "wrap": true,
+       "size": "Large",
+       "weight": "Bolder"
+      },
+      {
+       "type": "TextBlock",
+       "text": "Thursday, 26 Nov 2026 • Curated by Gemini for our Salesforce Team",
+       "wrap": true,
+       "isSubtle": true,
+       "spacing": "None"
+      },
+      {
+       "type": "Container",
+       "separator": true,
+       "spacing": "Medium",
+       "items": [
+        {
+         "type": "TextBlock",
+         "text": "[AI RADAR] Google Gemini expands partnership with Golden State for operations and fan experience",
+         "wrap": true,
+         "weight": "Bolder",
+         "color": "Good"
+        },
+        {
+         "type": "TextBlock",
+         "text": "- Google and Golden State expanded their partnership to make Google Gemini the Official AI Assistant Partner of the Warriors, the Valkyries, and Chase Center.\n- Golden State is building custom AI agents with Gemini to assist business and basketball operations.",
+         "wrap": true,
+         "spacing": "Small"
+        },
+        {
+         "type": "TextBlock",
+         "text": "**Client Impact:** Review client operational workflows to identify where custom AI agents can automate routine internal tasks.",
+         "wrap": true,
+         "spacing": "Small",
+         "isSubtle": true
+        },
+        {
+         "type": "ActionSet",
+         "spacing": "Small",
+         "actions": [
+          {
+           "type": "Action.OpenUrl",
+           "title": "Read on Google AI Blog",
+           "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "Container",
+       "separator": true,
+       "spacing": "Medium",
+       "items": [
+        {
+         "type": "TextBlock",
+         "text": "[SF RELEASE] MuleSoft rebuilt its observability platform on Hyperforce while migrating 39 petabytes",
+         "wrap": true,
+         "weight": "Bolder",
+         "color": "Accent"
+        },
+        {
+         "type": "TextBlock",
+         "text": "- MuleSoft migrated 39 petabytes of telemetry while replacing its observability platform on Hyperforce across more than 12 regions.\n- Reducing services from 153 to 43 drove a 5x gain in infrastructure efficiency.\n- Measured query latencies improved by 2X, while P95 telemetry delay dropped from multiple minutes to less than 1 minute.",
+         "wrap": true,
+         "spacing": "Small"
+        },
+        {
+         "type": "TextBlock",
+         "text": "**Client Impact:** Architecture teams should evaluate Hyperforce migrations to simplify client infrastructure and reduce query latency.",
+         "wrap": true,
+         "spacing": "Small",
+         "isSubtle": true
+        },
+        {
+         "type": "ActionSet",
+         "spacing": "Small",
+         "actions": [
+          {
+           "type": "Action.OpenUrl",
+           "title": "Read on Salesforce Engineering",
+           "url": "https://engineering.salesforce.com/how-mulesoft-rebuilt-a-live-observability-platform-while-migrating-39-petabytes-of-customer-data/"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "Container",
+       "separator": true,
+       "spacing": "Medium",
+       "items": [
+        {
+         "type": "TextBlock",
+         "text": "💬 Who will try these updates in a sandbox today and share what they find?",
+         "wrap": true,
+         "weight": "Bolder"
+        }
+       ],
+       "style": "emphasis"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}
