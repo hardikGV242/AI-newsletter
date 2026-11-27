@@ -371,6 +371,78 @@
    ],
    "quiz": [],
    "quiz_revealed": false
+  },
+  {
+   "date": "2026-11-27",
+   "weekday": 4,
+   "kind": "story",
+   "reason": "",
+   "headline": "NVIDIA Releases Nemotron 3.5 Parse for Document Processing",
+   "stories": [
+    {
+     "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+     "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+     "source": "Hugging Face Blog",
+     "category": "ai",
+     "facts": [
+      {
+       "id": "f1",
+       "fact": "NVIDIA recently released Nemotron 3.5 Parse, a compact document model that converts page images into structured data for retrieval-augmented generation and agents.",
+       "evidence": "We recently released NVIDIA Nemotron 3.5 Parse, a compact document model that turns page images into structured data for retrieval-augmented generation (RAG) and agents."
+      },
+      {
+       "id": "f2",
+       "fact": "NVIDIA is open-sourcing the Synthetic Charts V1 dataset, which includes 9.98 million examples of rendered charts and structured annotations.",
+       "evidence": "Synthetic Charts V1 — 9.98M examples: rendered charts and structured annotations for learning categories, series, and numerical values."
+      },
+      {
+       "id": "f3",
+       "fact": "The open-sourced Synthetic Tables V1 dataset contains 1 million examples of rendered HTML tables with targets preserving rows, columns, headers, and cell relationships.",
+       "evidence": "Synthetic Tables V1 — 1M examples: rendered HTML tables with targets that preserve rows, columns, headers, and cell relationships."
+      },
+      {
+       "id": "f5",
+       "fact": "At concurrency 512, Parse 3.5 reaches 13.48 pages per second without speculation and 20.44 pages per second with DFlash2, compared to 2.98 pages per second for Parse 2.0.",
+       "evidence": "At 512, Parse 3.5 reaches 13.48 pages/s without speculation and 20.44 pages/s with DFlash2, versus 2.98 for Parse 2.0."
+      },
+      {
+       "id": "f6",
+       "fact": "In a dental reference run, the estimated first-attempt success rate for Parse increased from 0.00% for the base model to 95.85% after SFT and 96.58% after RLVR.",
+       "evidence": "In the dental reference run, the estimated first-attempt success rate (sampled pass@1) rose from 0.00% for the base model to 95.85% after SFT and 96.58% after RLVR."
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "What was the final day to sit for the CPQ Administrator exam?",
+     "options": [
+      "August 31, 2026",
+      "February 1, 2027",
+      "June 2026"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "How many petabytes of telemetry did MuleSoft migrate during its platform replacement?",
+     "options": [
+      "39",
+      "153",
+      "43"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "How many domain-specific repositories does the Second Brain framework currently span?",
+     "options": [
+      "21",
+      "200",
+      "250"
+     ],
+     "answer": 0
+    }
+   ],
+   "quiz_revealed": false
   }
  ]
 }
